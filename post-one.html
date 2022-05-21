@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.ckeditor.com/4.18.0/standard/ckeditor.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>adminboard</title>
+</head>
+
+<body>
+        <div class="container-fluid bg-dark">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <a class="navbar-brand text-light" href="index.html">AdminBoard</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Dashboard</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Posts.html">Posts</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Categories.html">Categories</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Utilisateurs.html">Utilisateurs</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="fa-solid fa-user"></i>
+                              Bienvenue Leblanc
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <li><a class="dropdown-item" href="profil.html"><i class="fa-solid fa-user"></i> Profil</a></li>
+                              <li><a class="dropdown-item" href="parametre.html"><i class="fa-solid fa-gear"></i> Parametre</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="logout.html"><i class="fa-solid fa-user-xmark"></i>Logout</a>
+                          </li>
+                        </ul>
+                      </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-primary">
+          <div class="container">
+            <nav class="navbar navbar-warning text-light">
+                <span class="navbar-brand mb-0 h1" style="font-size: 25px;">Post One</span>
+            </nav>
+          </div>
+        </div>
+        
+        <div class="container-fluid p-3 bg-light">
+            <div class="container">
+              <div class="row">
+                <!-- Button trigger modal -->
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                  <a class="btn" href="index.html" role="button"><i class="fa-solid fa-arrow-left"></i> Back To Dashboard</a>
+                </div>
+  
+                <!-- Modal -->
+                <div class="modal fade" id="post" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header bg-primary">
+                        <h5 class="modal-title" id="exampleModalLabel">Ajouter un post</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <label for="titre 1" class="form-label">Titre</label>
+                        <input type="text" class="form-control" id="titre 1">
+                        <label for="Default select example"> Category</label>
+                        <select class="form-select" aria-label="Default select example">
+                          <option value="1">Web Development</option>
+                          <option value="2">Tech Gadgets</option>
+                          <option value="3">Business</option>
+                          <option value="3">Health & wellness</option>
+                        </select>
+                        <label for="formFile" class="form-label">Image Upload</label>
+                        <input class="form-control" type="file" id="formFile">
+                        <p class="text-secondary">Max Size 3mb</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                  <button type="button" class="btn w-100 mt-2 text-light bg-success" data-bs-toggle="modal" data-bs-target="#Categorie">
+                    <i class="fa-solid fa-check"></i>
+                    Save Changes
+                  </button>
+                </div>
+  
+                <!-- Modal -->
+                <div class="modal fade" id="Categorie" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header bg-primary">
+                        <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <label for="titre" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="titre">
+                        <label for="pass" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="pass">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Update Password</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                  <button type="button" class="btn w-100 mt-2 text-light bg-danger" data-bs-toggle="modal" data-bs-target="#utilisateur">
+                    <i class="fa-solid fa-xmark"></i>
+                    Delete Post
+                  </button>
+                </div>
+  
+                <!-- Modal -->
+                <div class="modal fade" id="utilisateur" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header bg-warning">
+                        <h5 class="modal-title" id="exampleModalLabel">Ajouter un utilisateur</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <label for="name" class="form-label">Name</label>
+                          <input type="text" class="form-control" id="name">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="email">
+                          <label for="pass" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="pass">
+                          <label for="pass 2" class="form-label">Confirm Password</label>
+                          <input type="password" class="form-control" id="pass 2">
+  
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-warning">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid p-3">
+                <div class="container">
+                    <div class="">
+                        <div class="card">
+                            <div class="card-header">
+                            Edit Profile
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <label for="titre 1" class="form-label">Titre</label>
+                                    <input type="text" class="form-control" id="titre 1">
+                                </div>
+                                <div class="mt-2">
+                                    <label for="Default select example"> Category</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                      <option value="1">Web Development</option>
+                                      <option value="2">Tech Gadgets</option>
+                                      <option value="3">Business</option>
+                                      <option value="3">Health & wellness</option>
+                                    </select>
+                                </div>
+                                <div class="mt-2">
+                                    <label for="formFile" class="form-label">Image Upload</label>
+                                    <input class="form-control" type="file" id="formFile">
+                                    <p class="text-secondary">Max Size 3mb</p>
+                                </div>
+                                <div>
+                                    <label for="edit">Body</label>
+                                    <textarea name="editor1" id="edit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam suscipit repellendus iure culpa optio veritatis fugiat, inventore, ipsa sapiente sint commodi mollitia, reiciendis iusto praesentium beatae vel eligendi est aut?</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </div>
+        
+
+        <footer class="text-center p-5 text-light bg-black">
+          <h6>Copyright 2019 © adminBoard</h6>
+      </footer>
+
+        
+
+        <script>
+          CKEDITOR.replace( 'editor1' );
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
